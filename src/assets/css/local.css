@@ -69,6 +69,15 @@
     height: auto;
     display: block;
   }
+  #services-1188 .csa-icon-design {
+    width: 2.5rem;
+    position: relative;
+    top: 0.125rem;
+    left: 0.21875rem;
+  }
+  #services-1188 .csa-icon-database {
+    width: 1.5625rem;
+  }
   #services-1188 .cs-h3 {
     font-size: 1.25rem;
     line-height: 1.5em;
@@ -111,135 +120,566 @@
 }
 /* Dark Mode */
 /*-- -------------------------- -->
-<---       Side By Side         -->
+<---        Meet The Team        -->
 <--- -------------------------- -*/
 /* Mobile - 360px */
-@media only screen and (min-width: 0em) {
-  #sbs {
+@media only screen and (min-width: 0rem) {
+  #meet-team-1367 {
     padding: var(--sectionPadding);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
   }
-  #sbs .cs-container {
+  #meet-team-1367 .cs-container {
     width: 100%;
     max-width: 80rem;
     margin: auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    row-gap: 2.5rem;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
   }
-  #sbs .cs-left {
-    /* scaling the font size with the view width */
-    font-size: min(2.31vw, 0.7em);
-    /* using ems so we can use font size to scale the whole section */
-    width: 39.4375em;
-    height: 39.75em;
+  #meet-team-1367 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  #meet-team-1367 .cs-topper {
+    font-size: var(--topperFontSize);
+    font-weight: 700;
+    line-height: 1.2em;
+    text-align: inherit;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.25rem;
+    color: var(--primary);
+    display: block;
+  }
+  #meet-team-1367 .cs-title {
+    font-size: var(--headerFontSize);
+    font-weight: 900;
+    line-height: 1.2em;
+    text-align: inherit;
+    max-width: 43.75rem;
+    margin: 0 0 1rem 0;
+    color: var(--headerColor);
     position: relative;
   }
-  #sbs .cs-picture {
-    border-radius: 1.5em;
-    display: block;
-    position: absolute;
-    /* clips img tag corners */
-    overflow: hidden;
+  #meet-team-1367 .cs-text {
+    font-size: var(--bodyFontSize);
+    line-height: 1.5em;
+    text-align: inherit;
+    width: 100%;
+    max-width: 40.625rem;
+    margin: 0;
+    color: var(--bodyTextColor);
   }
-  #sbs .cs-picture img {
+  #meet-team-1367 .cs-card-group {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(12, 1fr);
+    /* 16px - 20px */
+    gap: clamp(1rem, 2vw, 1.25rem);
+  }
+  #meet-team-1367 .cs-item {
+    list-style: none;
+    width: 100%;
+    max-width: 25.8125rem;
+    display: flex;
+    flex-direction: column;
+    grid-column: span 12;
+  }
+  #meet-team-1367 .cs-item:hover .cs-link {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  #meet-team-1367 .cs-item:hover .cs-info {
+    color: #fff;
+    background-color: var(--secondary);
+  }
+  #meet-team-1367 .cs-picture-wrapper {
+    /* 12px - 20px */
+    margin-bottom: clamp(0.75rem, 4vw, 1.25rem);
+    position: relative;
+  }
+  #meet-team-1367 .cs-picture {
+    margin: 0 auto;
+    border-radius: 50%;
+    display: block;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    aspect-ratio: 1/1;
+  }
+  #meet-team-1367 .cs-picture img {
     width: 100%;
     height: 100%;
-    /* makes image act like a background image */
     object-fit: cover;
     position: absolute;
     top: 0;
     left: 0;
   }
-  #sbs .cs-picture1 {
-    width: 32.625em;
-    height: 36.3125em;
+  #meet-team-1367 .cs-info {
+    text-align: center;
+    /* 16px - 24px */
+    padding: clamp(1rem, 1.7vw, 1.5rem);
+    background-color: #f7f7f7;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* makes the info boxes grow when the items aren't matching heights */
+    flex-grow: 1;
+    transition: background-color 0.3s;
+  }
+  #meet-team-1367 .cs-name {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin: 0;
+    margin: 0 0 0.25rem;
+    gap: 1rem;
+    transition: color 0.3s;
+  }
+  #meet-team-1367 .cs-job {
+    transition: color 0.3s;
+  }
+  #meet-team-1367 .cs-social {
+    display: flex;
+    gap: 0.5rem;
+    position: absolute;
+    right: 50%;
+    bottom: 1.5rem;
+    z-index: 1;
+    transform: translateX(50%);
+  }
+  #meet-team-1367 .cs-link {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #fff;
+    opacity: 0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(1rem);
+    transition: transform 0.3s, opacity 0.3s;
+  }
+  #meet-team-1367 .cs-link:hover .cs-icon {
+    width: 1.375rem;
+    height: auto;
+    /* use this pen to generate a filter from black to a color of your choosing */
+    /* https://codepen.io/sosuke/pen/Pjoqqp */
+    filter: invert(55%) sepia(42%) saturate(4845%) hue-rotate(337deg) brightness(101%) contrast(98%);
+  }
+  #meet-team-1367 .cs-link:first-of-type, #meet-team-1367 .cs-link:last-of-type {
+    margin-top: -1.25rem;
+  }
+  #meet-team-1367 .cs-link:nth-of-type(1) {
+    transition-delay: 0.05s;
+  }
+  #meet-team-1367 .cs-link:nth-of-type(2) {
+    transition-delay: 0.1s;
+  }
+  #meet-team-1367 .cs-link:nth-of-type(3) {
+    transition-delay: 0.15s;
+  }
+  #meet-team-1367 .cs-link:nth-of-type(4) {
+    transition-delay: 0.2s;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #meet-team-1367 .cs-item {
+    grid-column: span 12;
+    max-width: 15rem;
+  }
+}
+/* Large Desktop - 1300px */
+/* Dark Mode */
+/*-- -------------------------- -->
+<---        Recent Posts        -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #blog-1347 {
+    padding: var(--sectionPadding);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+  }
+  #blog-1347 .cs-container {
+    width: 100%;
+    /* changes to 1280px on desktop */
+    max-width: 43.75rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #blog-1347 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  #blog-1347 .cs-title {
+    max-width: 20ch;
+  }
+  #blog-1347 .cs-topper {
+    color: var(--secondary);
+  }
+  #blog-1347 .cs-card-group {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1rem;
+  }
+  #blog-1347 .cs-item {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    grid-column: span 12;
+  }
+  #blog-1347 .cs-item:hover .cs-h3,
+  #blog-1347 .cs-item:hover .cs-date,
+  #blog-1347 .cs-item:hover .cs-category {
+    color: #fff;
+  }
+  #blog-1347 .cs-item:hover .cs-item-text {
+    background: var(--oBluePurpleGradient);
+  }
+  #blog-1347 .cs-item:hover .cs-icon-wrapper {
+    border-color: #fff;
+  }
+  #blog-1347 .cs-item:hover .cs-icon,
+  #blog-1347 .cs-item:hover .cs-date-icon {
+    filter: brightness(1000%) grayscale(1);
+  }
+  #blog-1347 .cs-item:hover .cs-icon {
+    transform: rotate(45deg);
+  }
+  #blog-1347 .cs-item:hover .cs-category::before {
+    background-color: #fff;
+    opacity: 0.2;
+  }
+  #blog-1347 .cs-link {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    /* if one card has more content then the others, the card will stretch to fill the parent container */
+    flex-grow: 1;
+    gap: 1rem;
+  }
+  #blog-1347 .cs-picture {
+    width: 100%;
+    height: 20rem;
+    margin: 0;
+    border-radius: 1.5rem;
+    display: block;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+  }
+  #blog-1347 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
     top: 0;
     left: 0;
   }
-  #sbs .cs-picture2 {
-    width: 25.875em;
-    height: 25em;
-    background-color: #fff;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 40px;
-    /* 6px - 12px */
-    border: clamp(0.375em, 1.5vw, 0.75em) solid #fff;
-    right: 0;
-    bottom: 0;
-  }
-  #sbs .cs-right {
-    max-width: 33.875rem;
-    margin: auto;
-  }
-  #sbs .cs-topper {
-    text-align: left;
-    margin-bottom: 0.25rem;
-  }
-  #sbs .cs-title {
-    text-align: left;
-    max-width: 50rem;
-  }
-  #sbs .cs-text {
-    text-align: left;
-    max-width: 46.875rem;
-    margin-bottom: 1rem;
-  }
-  #sbs .cs-text:last-of-type {
-    margin-bottom: 2rem;
-  }
-  #sbs .cs-flex-group {
-    /* 16px - 32px */
-    padding: clamp(1rem, 3vw, 2rem);
+  #blog-1347 .cs-item-text {
+    padding: 1.25rem;
     background-color: #f7f7f7;
-    border-radius: 1rem;
-    position: relative;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* makes the item text the element that grows to fill the container */
+    flex-grow: 1;
+    transition: background-color 0.3s;
   }
-  #sbs .cs-flex-p {
-    /* 14px - 16px */
-    font-size: clamp(0.875rem, 1.5vw, 1rem);
-    line-height: 1.5em;
-    margin: 0 0 1rem;
-    color: #353535;
-  }
-  #sbs .cs-name {
-    font-size: 1rem;
-    font-weight: bold;
+  #blog-1347 .cs-h3 {
+    /* 20px - 25px */
+    font-size: clamp(1.25rem, 1.8vw, 1.5625rem);
     line-height: 1.2em;
-    text-transform: uppercase;
-    margin: 0 0 0.25rem;
-    color: var(--headerColor);
-    display: block;
+    text-align: left;
+    margin: 0;
+    color: #1a1a1a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    transition: color 0.3s;
   }
-  #sbs .cs-job {
+  #blog-1347 .cs-icon-wrapper {
+    width: 3rem;
+    height: 3rem;
+    border: 1px solid #bababa;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* prevents the parent flexbox from shrinking the icon */
+    flex-shrink: 0;
+    transition: border-color 0.3s;
+  }
+  #blog-1347 .cs-icon {
+    width: auto;
+    height: 1.375rem;
+    transition: filter 0.3s, transform 0.3s;
+  }
+  #blog-1347 .cs-info {
+    margin: 1rem 0 0;
+    padding: 1rem 0 0;
+    border-top: 1px solid #e8e8e8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #blog-1347 .cs-date {
     font-size: 0.875rem;
     line-height: 1.5em;
-    color: #353535;
-    display: block;
+    text-align: left;
+    color: #1a1a1a;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.3s;
   }
-  #sbs .cs-quote-icon {
-    /* 60px - 136px */
-    width: clamp(3.75rem, 10vw, 8.5rem);
-    height: auto;
+  #blog-1347 .cs-date-icon {
+    width: auto;
+    height: 1.5rem;
+    transition: filter 0.3s;
+  }
+  #blog-1347 .cs-category {
+    font-size: 0.875rem;
+    /* centers the text if the category bullet has to span multiple lines */
+    text-align: center;
+    padding: 0.25rem 1rem;
+    color: #1a1a1a;
+    border-radius: 5rem;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+  }
+  #blog-1347 .cs-category::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #e8e8e8;
     position: absolute;
-    /* 16px - 32px */
-    right: clamp(1rem, 4vw, 2rem);
-    bottom: 0rem;
+    top: 0;
+    left: 0;
+    z-index: -1;
   }
 }
+/* Tablet - 768px */
 /* Desktop - 1024px */
-@media only screen and (min-width: 64em) {
-  #sbs .cs-container {
-    flex-flow: row;
-    justify-content: space-between;
-    gap: 3.25rem;
+@media only screen and (min-width: 64rem) {
+  #blog-1347 .cs-container {
+    max-width: 80rem;
   }
-  #sbs .cs-left {
-    font-size: min(1.2vw, 1em);
-    flex: none;
+  #blog-1347 .cs-item {
+    grid-column: span 4;
   }
-  #sbs .cs-right {
+}
+/* Large Desktop - 1300px */
+/* Dark Mode */
+/*-- -------------------------- -->
+<---          Pricing           -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #pricing-602 {
+    padding: var(--sectionPadding);
+  }
+  #pricing-602 .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #pricing-602 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  #pricing-602 .cs-card-group {
+    width: 100%;
     margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 16px - 20px */
+    gap: clamp(1rem, 1.8vw, 1.25rem);
+    row-gap: 2.5rem;
+    perspective: 700px;
+    transform-style: preserve-3d;
+  }
+  #pricing-602 .cs-item {
+    list-style: none;
+    width: 100%;
+    /* matches the -88px the cs-price-box's margin top to offset it */
+    margin: 5.5rem 0 0 0;
+    /* 80px - 100px top *
+    /* 16px - 56px left & right */
+    /* 16px - 48px bottom */
+    padding: clamp(5rem, 9vw, 6.25rem) clamp(1rem, 2.3vw, 3.5rem) clamp(1rem, 5vw, 3rem);
+    box-shadow: 10px 10px 60px rgba(0, 0, 0, 0.17);
+    background-color: #fff;
+    /* prevents padding and border from affecting height and width */
+    box-sizing: border-box;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #pricing-602 .cs-price-box {
+    width: 100%;
+    /* 32px - 48px margin-bottom */
+    margin: -10.5rem 0 clamp(2rem, 5vw, 3rem) 0;
+    /* 24px - 32px top & bottom */
+    /* 24px - 48px left and right */
+    padding: clamp(1.5rem, 4vw, 2rem) clamp(1.5rem, 3vw, 3rem);
+    /* prevents padding and border from affecting height and width */
+    box-sizing: border-box;
+    background-color: #F7F7F7;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  #pricing-602 .csa-middle-box {
+    background: var(--oBluePurpleGradient);
+  }
+  #pricing-602 .csa-middle-box .cs-package, #pricing-602 .csa-middle-box .cs-price {
+    color: #fff;
+  }
+  #pricing-602 .cs-package {
+    /* 16px - 20px */
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    line-height: 1.2em;
+    text-align: center;
+    font-weight: 700;
+    margin: 0;
+    color: var(--bodyTextColor);
+  }
+  #pricing-602 .cs-price {
+    /* 24px - 32px */
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    line-height: 1.2em;
+    text-align: center;
+    font-weight: 700;
+    margin: 0;
+    color: var(--bodyTextColor);
+  }
+  #pricing-602 .cs-desc {
+    font-size: 0.75rem;
+    line-height: 1.2em;
+    text-align: center;
+    margin: 0;
+    color: var(--bodyTextColorWhite);
+    opacity: 0.8;
+  }
+  #pricing-602 .cs-item-text {
+    font-size: 0.875rem;
+    line-height: 1.5em;
+    text-align: left;
+    font-weight: 400;
+    /* 16px - 24px */
+    margin: 0 0 clamp(1rem, 2vw, 1.5rem);
+    color: var(--bodyTextColor);
+  }
+  #pricing-602 .cs-included {
+    /* 16px - 20px */
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    line-height: 1.2em;
+    text-align: left;
+    font-weight: 700;
+    /* 16px - 24px */
+    margin: 0 0 clamp(1rem, 2vw, 1.5rem);
+    color: var(--headerColor);
+  }
+  #pricing-602 .cs-ul {
+    /* 32px - 48px */
+    margin: 0 0 clamp(2rem, 5vw, 3rem);
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1rem;
+  }
+  #pricing-602 .cs-li {
+    font-size: 0.875rem;
+    list-style: none;
+    line-height: 1.5em;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    color: var(--bodyTextColor);
+    display: flex;
+    justify-content: flex-start;
+    /* push everything to the top so if the li goes to two lines the icon stays at the top */
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  #pricing-602 .cs-icon {
+    width: 0.9375rem;
+    height: auto;
+    /* push icon a little from the top so it looks centered */
+    margin-top: 0.1875rem;
+    display: block;
+  }
+  #pricing-602 .cs-price-button {
+    /* 14px - 18px */
+    font-size: clamp(0.875rem, 1.5vw, 1.125rem);
+    /* 36px - 50px */
+    line-height: clamp(2.25rem, 4.5vw, 3.125rem);
+    font-weight: 400;
+    text-transform: uppercase;
+    width: 100%;
+    height: clamp(2.25rem, 4.5vw, 3.125rem);
+    /* pushes button to the bottom of the cs-item */
+    margin-top: auto;
+    border-radius: 0.25rem;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #pricing-602 .cs-card-group {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #pricing-602 .cs-card-group.cs-active {
+    bottom: 0;
+    top: auto;
   }
 }
 /* Dark Mode */
@@ -378,36 +818,6 @@
   }
 }
 /* Dark Mode */
-@media only screen and (min-width: 0em) {
-  body.dark-mode #sbs-r .cs-left:before, body.dark-mode #sbs-r .cs-left:after {
-    background: var(--accent);
-  }
-  body.dark-mode #sbs-r .cs-picture2 {
-    background-color: var(--dark);
-    /* 6px - 12px */
-    border: clamp(0.375em, 1.5vw, 0.75em) solid var(--dark);
-  }
-  body.dark-mode #sbs-r .cs-topper {
-    color: var(--primaryLight);
-  }
-  body.dark-mode #sbs-r .cs-title,
-  body.dark-mode #sbs-r .cs-text,
-  body.dark-mode #sbs-r .cs-h3,
-  body.dark-mode #sbs-r .cs-flex-p,
-  body.dark-mode #sbs-r .cs-name {
-    color: var(--bodyTextColorWhite);
-  }
-  body.dark-mode #sbs-r .cs-flex-group {
-    background-color: var(--accent);
-  }
-  body.dark-mode #sbs-r .cs-job {
-    color: var(--bodyTextColorWhite);
-    opacity: 0.8;
-  }
-  body.dark-mode #sbs-r .cs-quote-icon {
-    opacity: 0.2;
-  }
-}
 /*-- -------------------------- -->
 <---          Gallery           -->
 <--- -------------------------- -*/
@@ -504,11 +914,6 @@
   }
 }
 /* Dark mode */
-@media only screen and (min-width: 0em) {
-  body.dark-mode #gallery .cs-title {
-    color: var(--bodyTextColorWhite);
-  }
-}
 /*-- -------------------------- -->
 <---          Reviews           -->
 <--- -------------------------- -*/
@@ -615,19 +1020,5 @@
   }
 }
 /* Dark Mode */
-@media only screen and (min-width: 0em) {
-  body.dark-mode #reviews .cs-title,
-  body.dark-mode #reviews .cs-text,
-  body.dark-mode #reviews .cs-item-p,
-  body.dark-mode #reviews .cs-reviewer {
-    color: var(--bodyTextColorWhite);
-  }
-  body.dark-mode #reviews .cs-item {
-    background: var(--medium);
-  }
-  body.dark-mode #reviews .cs-desc {
-    color: var(--primaryLight);
-  }
-}
 
 /*# sourceMappingURL=local.css.map */
